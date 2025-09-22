@@ -13,3 +13,7 @@
 22/Sep/2025 13:06:15 - "GET /css/style.css HTTP/1.1" 304 -
 22/Sep/2025 13:35:38 - code 404, message File not found
 22/Sep/2025 13:35:38 - "GET /favicon.ico HTTP/1.1" 404 -
+22/Sep/2025 13:44:38 - "GET / HTTP/1.1" 304 -
+22/Sep/2025 13:44:38 - "GET /css/style.css HTTP/1.1" 304 -
+22/Sep/2025 13:44:38 - "GET /js/script.js HTTP/1.1" 304 -
+22/Sep/2025 13:47:54 - "GET / HTTP/1.1" 304 -
