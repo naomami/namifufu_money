@@ -1,0 +1,15 @@
+サーバーがポート 3000 で起動しました
+ディレクトリ: /home/user/webapp
+20/Sep/2025 17:10:56 - "GET / HTTP/1.1" 200 -
+20/Sep/2025 17:10:57 - "GET /css/style.css HTTP/1.1" 200 -
+20/Sep/2025 17:10:57 - "GET /js/script.js HTTP/1.1" 200 -
+20/Sep/2025 17:10:59 - code 404, message File not found
+20/Sep/2025 17:10:59 - "GET /favicon.ico HTTP/1.1" 404 -
+21/Sep/2025 22:42:05 - "GET / HTTP/1.1" 200 -
+21/Sep/2025 22:42:05 - "GET /css/style.css HTTP/1.1" 200 -
+21/Sep/2025 22:42:06 - "GET /js/script.js HTTP/1.1" 200 -
+22/Sep/2025 13:06:15 - "GET / HTTP/1.1" 304 -
+22/Sep/2025 13:06:15 - "GET /js/script.js HTTP/1.1" 304 -
+22/Sep/2025 13:06:15 - "GET /css/style.css HTTP/1.1" 304 -
+22/Sep/2025 13:35:38 - code 404, message File not found
+22/Sep/2025 13:35:38 - "GET /favicon.ico HTTP/1.1" 404 -
