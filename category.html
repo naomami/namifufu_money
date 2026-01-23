@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>namifufu blog - お金と投資の情報サイト</title>
-    <meta name="description" content="30代女性の視点でお金・投資・資産運用について分かりやすく解説。初心者向けの投資情報から実践的なマネー術まで幅広く発信しています。">
-    <link rel="stylesheet" href="css/home-style.css?v=20251013b">
+    <title id="pageTitle">カテゴリー記事 - namifufu blog</title>
+    <meta name="description" content="カテゴリー別の記事一覧。お金・投資・資産運用について分かりやすく解説した記事を分類別にご覧いただけます。">
+    <link rel="stylesheet" href="css/home-style.css?v=20251102g">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700&family=Montserrat:wght@400;500;600;700&family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -36,10 +36,10 @@
     <nav class="main-nav">
         <div class="nav-container">
             <ul class="nav-list">
-                <li><a href="index.html" class="nav-link active">ホーム</a></li>
+                <li><a href="index.html" class="nav-link">ホーム</a></li>
                 <li><a href="category.html?cat=nisa" class="nav-link">NISA</a></li>
                 <li><a href="category.html?cat=crowdfunding" class="nav-link">クラファン</a></li>
-                <li><a href="#about" class="nav-link">プロフィール</a></li>
+                <li><a href="index.html#about" class="nav-link">プロフィール</a></li>
             </ul>
         </div>
     </nav>
@@ -58,16 +58,25 @@
                 <li><a href="index.html" class="mobile-menu-link">ホーム</a></li>
                 <li><a href="category.html?cat=nisa" class="mobile-menu-link">NISA</a></li>
                 <li><a href="category.html?cat=crowdfunding" class="mobile-menu-link">クラファン</a></li>
-                <li><a href="#about" class="mobile-menu-link">プロフィール</a></li>
+                <li><a href="index.html#about" class="mobile-menu-link">プロフィール</a></li>
             </ul>
         </nav>
     </div>
 
-    <!-- ヒーローセクション -->
-    <section class="hero">
-        <div class="hero-container">
-            <div class="hero-image-only">
-                <img src="https://page.gensparksite.com/v1/base64_upload/1a385362112e07e7934c61ce5cc8c57e" alt="namifufu family - 未来だけじゃなく大切な家族との今を楽しむ">
+    <!-- カテゴリヘッダー -->
+    <section class="category-hero">
+        <div class="container">
+            <div class="category-header">
+                <div class="breadcrumb">
+                    <a href="index.html">ホーム</a>
+                    <span class="breadcrumb-separator">></span>
+                    <span id="categoryBreadcrumb">カテゴリー</span>
+                </div>
+                <h1 class="category-title" id="categoryTitle">記事一覧</h1>
+                <p class="category-description" id="categoryDescription">カテゴリー別の記事をご覧いただけます</p>
+                <div class="category-count">
+                    <span id="articleCount">0</span>件の記事
+                </div>
             </div>
         </div>
     </section>
@@ -78,36 +87,19 @@
             <div class="content-wrapper">
                 <!-- メインコンテンツ -->
                 <div class="main-column">
-                    <!-- 人気記事セクション -->
-                    <section id="articles" class="articles-section">
-                        <div class="section-header">
-                            <h2 class="section-title">人気記事</h2>
-                            <p class="section-subtitle">多くの読者に読まれている記事をご紹介</p>
+                    <!-- 記事一覧 -->
+                    <section class="category-articles">
+                        <div class="articles-grid" id="articlesContainer">
+                            <!-- 記事がJavaScriptで動的に挿入されます -->
                         </div>
                         
-                        <div class="articles-grid">
-                            <!-- 記事は削除されました -->
-                        </div>
-                    </section>
-
-                    <!-- カテゴリ別記事セクション -->
-                    <section class="categories-section">
-                        <div class="section-header">
-                            <h2 class="section-title">カテゴリ別記事</h2>
-                            <p class="section-subtitle">気になるテーマから記事を探す</p>
-                        </div>
-                        
-                        <div class="categories-grid">
-                            <a href="category.html?cat=nisa" class="category-card">
-                                <h3 class="category-title">NISA</h3>
-                                <p class="category-description">NISA制度の活用方法</p>
-                                <span class="category-count">1記事</span>
-                            </a>
-                            <a href="category.html?cat=crowdfunding" class="category-card">
-                                <h3 class="category-title">クラファン</h3>
-                                <p class="category-description">クラウドファンディング投資</p>
-                                <span class="category-count">1記事</span>
-                            </a>
+                        <!-- 記事がない場合のメッセージ -->
+                        <div class="no-articles" id="noArticlesMessage" style="display: none;">
+                            <div class="no-articles-content">
+                                <h3>この カテゴリーの記事はまだありません</h3>
+                                <p>新しい記事が公開されるまでお待ちください。</p>
+                                <a href="index.html" class="btn btn-primary">ホームに戻る</a>
+                            </div>
                         </div>
                     </section>
                 </div>
@@ -145,7 +137,7 @@
                         <div class="tool-banner">
                             <h4 class="tool-title">SBI証券</h4>
                             <p class="tool-description">手数料が安く、投資信託の種類が豊富。初心者におすすめの証券会社です。</p>
-                            <a href="#" class="tool-link">詳細を見る</a>
+                            <a href="sbi-securities.html" class="tool-link">詳細を見る</a>
                         </div>
                     </div>
 
@@ -194,5 +186,6 @@
     </footer>
 
     <script src="js/home-script.js"></script>
+    <script src="js/category-script.js?v=20251102g"></script>
 </body>
 </html>
